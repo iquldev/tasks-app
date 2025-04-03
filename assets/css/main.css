@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+* {
+  font-family: "Noto Sans";
+}
+
+:root {
+  --ui-primary: black;
+  --ui-green: oklch(0.448 0.119 151.328);
+  --ui-low: oklch(0.967 0.067 122.328);
+  --ui-medium: oklch(0.973 0.071 103.193);
+  --ui-high: oklch(0.936 0.032 17.717);
+  --ui-gray: oklch(0.967 0.003 264.542);
+  --ui-text-primary: black;
+  --ui-text-secondary: oklch(55.1% 0.027 264.364);
+  --ui-bg: white;
+}
+
+.dark {
+  --ui-primary: white;
+  --ui-green: oklch(0.527 0.154 150.069);
+  --ui-low: oklch(0.274 0.072 132.109);
+  --ui-medium: oklch(0.286 0.066 53.813);
+  --ui-high: oklch(0.258 0.092 26.042);
+  --ui-gray: oklch(0.967 0.003 264.542);
+  --ui-text-primary: white;
+  --ui-text-secondary: oklch(55.1% 0.027 264.364);
+  --ui-bg: black;
+}

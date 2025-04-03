@@ -1,6 +1,6 @@
-# Nuxt Minimal Starter
+# tasks-app
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple application that allows you to record your notes. There are categories from important tasks to simple ones. There is sorting by importance of tasks. Local storage is supported.
 
 ## Setup
 

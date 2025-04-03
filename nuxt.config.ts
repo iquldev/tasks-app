@@ -20,4 +20,7 @@ export default defineNuxtConfig({
       colors: ["primary", "green"],
     },
   },
+  app: {
+    baseURL: '/tasks-app/'
+  }
 });

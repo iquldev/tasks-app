@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: '/tasks-app/'
+    baseURL: '/tasks-app/',
+    buildAssetsDir: 'assets'
   }
 });

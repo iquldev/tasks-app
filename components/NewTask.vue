@@ -6,6 +6,7 @@
       class="w-full"
       size="xl"
       v-model="title"
+      @change="checkInput"
     />
     <UInput
       type="text"
@@ -13,6 +14,7 @@
       class="w-full"
       size="xl"
       v-model="desc"
+      @change="checkInput"
     />
     <div class="flex gap-4 justify-between">
       <USelect
@@ -28,6 +30,7 @@
         icon="mdi:book-edit"
         label="Create new task"
         color="primary"
+        :disabled="buttonDisabled"
         @click="createTask"
       >
       </UButton>
@@ -61,6 +64,16 @@ const icon = computed(
     items.value.find((item: { value: any }) => item.value === category.value)
       ?.icon
 );
+
+const buttonDisabled = ref(true);
+
+const checkInput = () => {
+  if (title.value && desc.value && category.value) {
+    buttonDisabled.value = false;
+  } else {
+    buttonDisabled.value = true;
+  }
+};
 
 const title = ref("");
 const desc = ref("");

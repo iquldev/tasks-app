@@ -61,6 +61,16 @@
 </template>
 
 <script setup lang="ts">
+const toast = useToast();
+
+const showToast = (title: string, color: string, icon: string) => {
+  toast.add({
+    title: title,
+    color: color,
+    icon: icon,
+  });
+};
+
 const isLoading = ref(true);
 
 interface Task {
@@ -83,6 +93,8 @@ const currentCategory = ref("all");
 const removeTask = (id: number) => {
   tasks.value = tasks.value.filter((task) => task.id !== id);
   localStorage.setItem("tasks", JSON.stringify(tasks.value));
+
+  showToast("Task removed!", "red", "material-symbols:delete-forever-rounded");
 };
 
 const changeStatus = (id: number) => {
@@ -90,6 +102,12 @@ const changeStatus = (id: number) => {
     task.id === id ? { ...task, status: !task.status } : task
   );
   localStorage.setItem("tasks", JSON.stringify(tasks.value));
+
+  showToast(
+    "Task status changed!",
+    "info",
+    "material-symbols:done-all-rounded"
+  );
 };
 
 const addTask = (title: string, desc: string, category: string) => {
@@ -101,6 +119,8 @@ const addTask = (title: string, desc: string, category: string) => {
     status: false,
   });
   newTaskVisible.value = false;
+
+  showToast("Task successfully added!", "green", "mdi:check");
 };
 
 watch(

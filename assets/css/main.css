@@ -8,6 +8,8 @@
 :root {
   --ui-primary: black;
   --ui-green: oklch(0.448 0.119 151.328);
+  --ui-yellow: oklch(85.2% 0.199 91.936);
+  --ui-red: oklch(63.7% 0.237 25.331);
   --ui-low: oklch(0.967 0.067 122.328);
   --ui-medium: oklch(0.973 0.071 103.193);
   --ui-high: oklch(0.936 0.032 17.717);

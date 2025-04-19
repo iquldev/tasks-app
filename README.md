@@ -1,9 +1,5 @@
 <div align="left" style="position: relative;">
-<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="right" width="30%" style="margin: -20px 0 0 20px;">
 <h1>TASKS-APP</h1>
-<p align="left">
-	<em><code>❯ REPLACE-ME</code></em>
-</p>
 <p align="left">
 	<img src="https://img.shields.io/github/license/iquldev/tasks-app?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/iquldev/tasks-app?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
@@ -38,13 +34,17 @@
 
 ##  Overview
 
-<code>❯ REPLACE-ME</code>
+A simple application that allows you to record your notes.
 
 ---
 
 ##  Features
 
-<code>❯ REPLACE-ME</code>
+<ul>
+	<li>Ability to set priority and status</li>
+	<li>Pleasant and minimalistic design</li>
+	<li>Dark and light theme</li>
+</ul>
 
 ---
 
@@ -78,115 +78,6 @@
     └── tsconfig.json
 ```
 
-
-###  Project Index
-<details open>
-	<summary><b><code>TASKS-APP/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/package-lock.json'>package-lock.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/nuxt.config.ts'>nuxt.config.ts</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/tsconfig.json'>tsconfig.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/tailwind.config.js'>tailwind.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/app.vue'>app.vue</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/package.json'>package.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/app.config.ts'>app.config.ts</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- .github Submodule -->
-		<summary><b>.github</b></summary>
-		<blockquote>
-			<details>
-				<summary><b>workflows</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/.github/workflows/nuxtjs.yml'>nuxtjs.yml</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- components Submodule -->
-		<summary><b>components</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/components/Card.vue'>Card.vue</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/components/TitleBar.vue'>TitleBar.vue</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/components/NewTask.vue'>NewTask.vue</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- pages Submodule -->
-		<summary><b>pages</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/pages/index.vue'>index.vue</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- public Submodule -->
-		<summary><b>public</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/public/robots.txt'>robots.txt</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- server Submodule -->
-		<summary><b>server</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/iquldev/tasks-app/blob/master/server/tsconfig.json'>tsconfig.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-</details>
-
 ---
 ##  Getting Started
 
@@ -215,12 +106,8 @@ Install tasks-app using one of the following methods:
 ```
 
 3. Install the project dependencies:
-
-
-**Using `npm`** &nbsp; [<img align="center" src="" />]()
-
 ```sh
-❯ echo 'INSERT-INSTALL-COMMAND-HERE'
+❯ npm i
 ```
 
 
@@ -231,25 +118,26 @@ Run tasks-app using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="" />]()
 
 ```sh
-❯ echo 'INSERT-RUN-COMMAND-HERE'
+❯ npm run dev
 ```
 
 
-###  Testing
-Run the test suite using the following command:
+###  Build
+Build tasks-app using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="" />]()
 
 ```sh
-❯ echo 'INSERT-TEST-COMMAND-HERE'
+❯ npm run build
 ```
 
 
 ---
 ##  Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>Storing tasks via Local Storage</strike>
+- [ ] **`Task 2`**: Optimization for smartphones
+- [ ] **`Task 3`**: Backend implementation
+- [ ] **`Task 4`**: AI???
 
 ---
 
@@ -298,12 +186,6 @@ Run the test suite using the following command:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
+This project is protected under the MIT License. For more details, refer to the LICENSE file.
 
 ---

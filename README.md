@@ -135,9 +135,10 @@ Build tasks-app using the following command:
 ##  Project Roadmap
 
 - [X] **`Task 1`**: <strike>Storing tasks via Local Storage</strike>
-- [ ] **`Task 2`**: Optimization for smartphones
-- [ ] **`Task 3`**: Backend implementation
-- [ ] **`Task 4`**: AI???
+- [ ] **`Task 2`**: Pinia and MongoDB 
+- [ ] **`Task 3`**: Optimization for smartphones
+- [ ] **`Task 4`**: Backend implementation
+- [ ] **`Task 5`**: AI???
 
 ---
 

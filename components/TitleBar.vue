@@ -1,5 +1,7 @@
 <template>
-  <div class="flex items-center justify-between">
+  <div
+    class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between"
+  >
     <h1 class="text-3xl font-bold text-(--ui-text-primary)">Tasks</h1>
     <div class="flex gap-4">
       <USelect

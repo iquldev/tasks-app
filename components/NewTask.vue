@@ -6,7 +6,6 @@
       class="w-full"
       size="xl"
       v-model="title"
-      @change="checkInput"
     />
     <UInput
       type="text"
@@ -14,7 +13,6 @@
       class="w-full"
       size="xl"
       v-model="desc"
-      @change="checkInput"
     />
     <div class="flex gap-4 justify-between">
       <USelect
@@ -65,15 +63,13 @@ const icon = computed(
       ?.icon
 );
 
-const buttonDisabled = ref(true);
-
-const checkInput = () => {
+const buttonDisabled = computed(() => {
   if (title.value && desc.value && category.value) {
-    buttonDisabled.value = false;
+    return false;
   } else {
-    buttonDisabled.value = true;
+    return true;
   }
-};
+});
 
 const title = ref("");
 const desc = ref("");

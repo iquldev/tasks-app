@@ -4,7 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@formkit/auto-animate", "@nuxt/ui"],
+  modules: [
+    "@formkit/auto-animate",
+    "@nuxt/ui",
+    "nuxt-mongoose",
+    "nuxt-security"
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -28,5 +28,5 @@
   --ui-gray: oklch(0.967 0.003 264.542);
   --ui-text-primary: white;
   --ui-text-secondary: oklch(55.1% 0.027 264.364);
-  --ui-bg: black;
+  --ui-bg: oklch(0.15 0 82.32);
 }

@@ -22,11 +22,11 @@
 .dark {
   --ui-primary: white;
   --ui-green: oklch(0.527 0.154 150.069);
-  --ui-low: oklch(0.274 0.072 132.109);
-  --ui-medium: oklch(0.286 0.066 53.813);
-  --ui-high: oklch(0.258 0.092 26.042);
+  --ui-low: oklch(0.527 0.154 150.069);
+  --ui-medium: oklch(0.84 0.1656 82.32);
+  --ui-high: oklch(0.58 0.2066 26.63);
   --ui-gray: oklch(0.967 0.003 264.542);
   --ui-text-primary: white;
   --ui-text-secondary: oklch(55.1% 0.027 264.364);
-  --ui-bg: black;
+  --ui-bg: oklch(0.15 0 82.32);
 }

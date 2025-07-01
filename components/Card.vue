@@ -1,5 +1,5 @@
 <template>
-  <div class="relative" v-if="isLoaded">
+  <motion.div class="relative" v-if="isLoaded">
     <div
       class="p-4 rounded-sm flex flex-col gap-y-2"
       :style="{ backgroundColor: `var(${bgColor})` }"
@@ -24,7 +24,7 @@
     </div>
     <div class="absolute top-4 right-4 flex items-center flex-col gap-2">
       <UCheckbox
-        color="green"
+        color="white"
         v-model="isChecked"
         size="xl"
         @change="changeStatus(props.id)"
@@ -36,18 +36,18 @@
         ></Icon>
       </button>
     </div>
-  </div>
+  </motion.div>
 </template>
 
 <script setup>
 const isLoaded = ref(false);
 
 const props = defineProps({
+  id: String,
   title: String,
   desc: String,
   category: String,
   status: Boolean,
-  id: Number,
 });
 const emit = defineEmits(["removeTask", "changeStatus"]);
 

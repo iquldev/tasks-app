@@ -18,8 +18,6 @@
 
 - [ Overview](#-overview)
 - [ Features](#-features)
-- [ Project Structure](#-project-structure)
-  - [ Project Index](#-project-index)
 - [ Getting Started](#-getting-started)
   - [ Prerequisites](#-prerequisites)
   - [ Installation](#-installation)
@@ -46,37 +44,6 @@ A simple application that allows you to record your notes.
 	<li>Dark and light theme</li>
 </ul>
 
----
-
-##  Project Structure
-
-```sh
-└── tasks-app/
-    ├── .github
-    │   └── workflows
-    ├── LICENSE
-    ├── README.md
-    ├── app.config.ts
-    ├── app.vue
-    ├── assets
-    │   └── css
-    ├── components
-    │   ├── Card.vue
-    │   ├── NewTask.vue
-    │   └── TitleBar.vue
-    ├── nuxt.config.ts
-    ├── package-lock.json
-    ├── package.json
-    ├── pages
-    │   └── index.vue
-    ├── public
-    │   ├── favicon.ico
-    │   └── robots.txt
-    ├── server
-    │   └── tsconfig.json
-    ├── tailwind.config.js
-    └── tsconfig.json
-```
 
 ---
 ##  Getting Started
@@ -85,7 +52,7 @@ A simple application that allows you to record your notes.
 
 Before getting started with tasks-app, ensure your runtime environment meets the following requirements:
 
-- **Programming Language:** Vue.js
+- **Programming Language:** Vue.js, Nuxt
 - **Package Manager:** Npm
 
 
@@ -135,9 +102,9 @@ Build tasks-app using the following command:
 ##  Project Roadmap
 
 - [X] **`Task 1`**: <strike>Storing tasks via Local Storage</strike>
-- [ ] **`Task 2`**: MongoDB 
-- [ ] **`Task 3`**: Optimization for smartphones
-- [ ] **`Task 4`**: Backend implementation
+- [X] **`Task 2`**: MongoDB 
+- [X] **`Task 3`**: Optimization for smartphones
+- [X] **`Task 4`**: Backend implementation
 - [ ] **`Task 5`**: AI???
 
 ---

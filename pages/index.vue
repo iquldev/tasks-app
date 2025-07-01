@@ -16,8 +16,8 @@
           (item) =>
             currentCategory === 'all' || item.category === currentCategory
         )"
-        :key="item.id"
-        :id="item.id"
+        :key="item._id"
+        :id="item._id"
         :title="item.title"
         :desc="item.desc"
         :category="item.category"
@@ -61,6 +61,8 @@
 </template>
 
 <script setup lang="ts">
+import { $fetch } from "ofetch";
+
 const toast = useToast();
 
 const showToast = (title: string, color: string, icon: string) => {
@@ -74,7 +76,7 @@ const showToast = (title: string, color: string, icon: string) => {
 const isLoading = ref(true);
 
 interface Task {
-  id: number;
+  _id: string;
   title: string;
   desc: string;
   category: string;
@@ -90,18 +92,33 @@ const setNewTaskVisible = () => {
 
 const currentCategory = ref("all");
 
-const removeTask = (id: number) => {
-  tasks.value = tasks.value.filter((task) => task.id !== id);
-  localStorage.setItem("tasks", JSON.stringify(tasks.value));
+const removeTask = async (_id: string) => {
+  tasks.value = tasks.value.filter((task) => task._id !== _id);
+  try {
+    await $fetch(`/api/tasks/${_id}`, { method: "DELETE" });
+  } catch (e) {
+    console.error("Error removing task:", e);
+    return;
+  }
 
   showToast("Task removed!", "red", "material-symbols:delete-forever-rounded");
 };
 
-const changeStatus = (id: number) => {
-  tasks.value = tasks.value.map((task) =>
-    task.id === id ? { ...task, status: !task.status } : task
-  );
-  localStorage.setItem("tasks", JSON.stringify(tasks.value));
+const changeStatus = async (_id: string) => {
+  const idx = tasks.value.findIndex((task) => task._id === _id);
+  if (idx === -1) return;
+
+  try {
+    const updated = await $fetch<Task>(`/api/tasks/${_id}`, {
+      method: "PUT",
+      body: { ...tasks.value[idx], status: !tasks.value[idx].status },
+    });
+
+    tasks.value[idx] = updated;
+  } catch (e) {
+    console.error("Error changing task status:", e);
+    return;
+  }
 
   showToast(
     "Task status changed!",
@@ -110,30 +127,32 @@ const changeStatus = (id: number) => {
   );
 };
 
-const addTask = (title: string, desc: string, category: string) => {
-  tasks.value.push({
-    id: tasks.value.length,
-    title: title,
-    desc: desc,
-    category: category,
-    status: false,
-  });
-  newTaskVisible.value = false;
+const addTask = async (title: string, desc: string, category: string) => {
+  showToast("Adding task...", "info", "material-symbols:downloading-rounded");
 
+  try {
+    const newTask = await $fetch<Task>("/api/tasks", {
+      method: "POST",
+      body: { title, desc, category, status: false },
+    });
+
+    tasks.value.push(newTask);
+  } catch (e) {
+    console.error("Error adding task:", e);
+    return;
+  }
+
+  newTaskVisible.value = false;
   showToast("Task successfully added!", "green", "mdi:check");
 };
 
-watch(
-  tasks,
-  () => {
-    localStorage.setItem("tasks", JSON.stringify(tasks.value));
-  },
-  { deep: true }
-);
-
-onMounted(() => {
-  tasks.value = JSON.parse(localStorage.getItem("tasks") || "[]");
-  isLoading.value = false;
+onMounted(async () => {
+  isLoading.value = true;
+  try {
+    tasks.value = await $fetch<Task[]>("/api/tasks");
+  } finally {
+    isLoading.value = false;
+  }
 });
 
 provide("addTask", addTask);

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     "@formkit/auto-animate",
     "@nuxt/ui",
     "nuxt-mongoose",
-    "nuxt-security"
+    "nuxt-security",
   ],
   vite: {
     plugins: [tailwindcss()],
@@ -26,7 +26,6 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: '/tasks-app/',
-    buildAssetsDir: 'assets'
-  }
+    baseURL: "/",
+  },
 });

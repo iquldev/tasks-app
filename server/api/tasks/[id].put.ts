@@ -1,14 +1,9 @@
 export default defineEventHandler(async (event) => {
   try {
-    const raw = event.context.params?.id as string;
-    const idx = Number(raw);
+    const _id = event.context.params?.id as string;
     const body = await readBody<Record<string, any>>(event);
-
-    const docs = await TaskSchema.find().skip(idx).limit(1);
-    const targetId = docs[0]._id;
-
     return await TaskSchema.findByIdAndUpdate(
-      targetId,
+      _id,
       { $set: body },
       { new: true, runValidators: true }
     );

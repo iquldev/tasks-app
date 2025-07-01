@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   try {
-    return await new TaskSchema(body).save();
+    return await TaskSchema.create(body);
   } catch (error) {
     return error;
   }
